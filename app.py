@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 # print(__name__)
@@ -6,10 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
   # return 'hello world'
-  return (
-    '<h1>Hello World</h1>' 
-    '<p>hello this is a paragraph tag</p>'
-  )
+  return render_template('home.html')
 
 if __name__ == '__main__':  
   print('hello this is inside if statement')
