@@ -19,4 +19,16 @@ def load_jobs_from_db():
     with engine.connect() as conn:
         result = conn.execution_options(stream_results=True).execute(text("select * from jobs"))
         result_all = result.all()
-        return (result_all) 
+        result_dict = []
+        for row in result_all:
+            result_dict.append(dict(row._mapping))
+        return (result_dict)
+    
+# id = 3
+def load_job_from_db(id):
+    with engine.connect() as conn:
+        result = conn.execution_options(stream_results = True).execute(text(f'select * from jobs where id = {id}'))
+        result_all = result.all()
+        if len(result_all) == 0:
+            return None
+        return (dict(result_all[0]._mapping))
