@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted</title>
+    <link rel = 'icon' href = '/static/android-chrome-512x512.png'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    {% include 'nav.html' %}
+    <div class = 'text-center' >
+        <h1 class = "mt-2">Flask</h1>
+        <h2 class = "fs-6">Project</h2>
+        <img class = "img-fluid mt-2 mb-4" src="../../static/banner.jpg" alt="banner image">
+      </div>
+    <div class = 'container'>
+        <p>Your application for <b>{{job.title}}</b> is submitted successfully</p><br>
+        
+        <h4>Full name</h4>
+        <p>{{data.name}}</p>
+
+        <h4>Email</h4>
+        <p>{{data.mail}}</p>
+
+        {% if data.phone %}
+            <h4>Phone</h4>
+            <p>{{data.phone}}</p>
+        {% endif %}
+        
+        {% if data.edu %}
+            <h4>Education</h4>
+            <p>{{data.edu}}</p>
+        {% endif %}
+        
+        {% if data.linkedin %}
+            <h4>LinkedIN</h4>
+            <a>{{data.linkedin}}</a>
+        {% endif %}
+        
+        {% if data.resume %}
+            <h4>Resume</h4>
+            <a>{{data.resume}}</a>
+        {% endif %}
+        
+    </div>
+</body>
+</html>

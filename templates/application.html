@@ -1,0 +1,33 @@
+<div class = 'container'>
+    <h2>Application form</h2>
+    <form action="/job/{{job.id}}/submitted" method="post">
+        <div class = 'mb-2'>
+            <label for="name" >Full Name : </label>
+            <input type="text" id="name" name = 'name' required><br>
+        </div>
+        <div class = 'mb-2'>
+            <label for="email" >Email : </label>
+            <input type="email" id="email" required name = 'mail'><br>
+        </div>
+        <div class = 'mb-2'>
+            <label for="phone" >Phone No. : </label>
+            <input type="tel" id="phone" name = 'phone'><br>
+        </div>
+        <div class = 'mb-2'>
+            <label for="edu" >Education : </label><br>
+            <textarea name="edu" id="edu" cols="30" rows="10"></textarea><br>
+        </div>
+        <div class = 'mb-2'>
+            <label for="linkdin">Linkdin URL : </label>
+            <input type="text" id="linkdin" name = 'linkedin' placeholder = "https://linkdin.com/nilesh"><br>
+        </div>
+        <div class = 'mb-2'>
+            <label for="resume">Resume URL :</label>
+            <input type="text" id="resume" name = 'resume' placeholder="https://gdrive/user/resueme.pdf"><br>
+        </div>
+        <div class = 'mb-2'>
+            <input type="reset">
+            <input type="submit">
+        </div>
+    </form>
+</div>

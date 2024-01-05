@@ -9,7 +9,11 @@
 </head>
 <body>
     {% include "nav.html" %}
-    <img class = "img-fluid mt-2 mb-4" src="../static/banner.jpg" alt="banner image">
+    <div class = 'text-center' >
+        <h1 class = "mt-2">Flask</h1>
+        <h2 class = "fs-6">Project</h2>
+        <img class = "img-fluid mt-2 mb-4" src="../static/banner.jpg" alt="banner image">
+      </div>
     <div class = 'container mt-5'>
         <h3>{{job.title}}</h3>
         <p class = "lead">{{job.location}}</p>
@@ -29,6 +33,8 @@
         <p class = "lead">{{job.currency}} {{job.salary}}</p>
 
     </div>
+
+    {% include "application.html" %}
     {% include "footer.html" %}
 
 </body>
